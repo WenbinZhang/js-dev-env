@@ -1,6 +1,12 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang='en'>
     <head>
+        <% if (htmlWebpackPlugin.options.tackJSToken) { %>
+        <!-- BEGIN TRACKJS -->
+        <script type="text/javascript">window._trackJs = { token: '<%=htmlWebpackPlugin.options.tackJSToken%>' };</script>
+        <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+        <!-- END TRACKJS -->
+        <% } %>
         <meta charset="utf-8">
     </head>
     <body>
@@ -17,6 +23,5 @@
                 
             </tbody>
         </table>
-        <script src="bundle.js"></script>
     </body>
 </html>
